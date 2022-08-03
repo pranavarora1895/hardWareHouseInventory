@@ -1,0 +1,31 @@
+[
+    {
+      "product_name": "Gaming Mouse",
+      "product_desc": "Enhanced RGB Quick Response Mouse",
+      "price": 750,
+      "units": 45,
+      "lower_limit_stock": 10
+    },
+    
+    {
+      "product_name": "Mechanical Keyboard",
+      "product_desc": "Built for extensive typing",
+      "price": 8250,
+      "units": 23,
+      "lower_limit_stock": 5
+    },
+    {
+      "product_name": "Monitor Screen",
+      "product_desc": "32 inch wide display screen built for coding",
+      "price": 11250,
+      "units": 12,
+      "lower_limit_stock": 15
+    },
+    {
+      "product_name": "UPS",
+      "product_desc": "UPS with a power backup upto 45 mins",
+      "price": 1200,
+      "units": 40,
+      "lower_limit_stock": 10
+    }
+  ]

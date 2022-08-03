@@ -1,6 +1,5 @@
-from redis_om import EmbeddedJsonModel, Field, JsonModel
+from redis_om import Field, JsonModel
 from pydantic import PositiveInt
-from typing import Optional, List
 
 # Added Product Schema
 

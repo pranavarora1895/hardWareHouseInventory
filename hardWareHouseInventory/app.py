@@ -8,7 +8,7 @@ from redis_om.model import NotFoundError
 
 app = Flask(__name__)
 
-# Utility function to format list of People objects as
+# Utility function to format list of Product objects as
 # a results dictionary, for easy conversion to JSON in
 # API responses.
 
@@ -47,7 +47,18 @@ def home_page():
             </head>
             <body>
                 <h1>hardWareHouse Inventory REST API</h1>
-                <p><a href="https://github.com/redis-developer/redis-om-python-flask-skeleton-app">Read the documentation on GitHub</a>.</p>
+                <h2>API Usage</h2>
+                <h3>1. Create a Product</h3>
+                <code>POST - http://127.0.0.1:5000/product/new</code><br>
+                <code>header - Content-type - application/json</code><br>
+                <code>body - {
+                    "product_name": "{name-of-product}",
+                    "product_desc": "{product-description}",
+                    "price": {price-per-piece},
+                    "units": {no-of-units-available},
+                    "lower_limit_stock": {lower-stock-limit}
+                                    }
+                </code>
             </body>
         </html>
     """

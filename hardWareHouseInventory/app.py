@@ -5,6 +5,7 @@ from pydantic import ValidationError
 from product import Product
 from redis_om import Migrator
 from redis_om.model import NotFoundError
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -36,6 +37,49 @@ def create_person():
         print(e)
         return "Bad request.", 400
 
+# Update a Product
+
+
+@app.route("/product/update/<id>/", methods=["PUT"])
+def update_product(id):
+    try:
+        product = Product.get(id)
+
+    except NotFoundError:
+        return "Bad request", 400
+
+    new_product = request.json
+    product.product_name = new_product.get("product_name")
+    product.product_desc = new_product.get("product_desc")
+    product.price = new_product.get("price")
+    product.units = new_product.get("units")
+    product.lower_limit_stock = new_product.get("lower_limit_stock")
+    product.timestamp = datetime.now()
+
+    product.save()
+
+    print("updated product", new_product.get("product_name"))
+    return new_product
+
+# Delete a Product
+
+
+@app.route("/product/delete/<id>/", methods=["DELETE"])
+def delete_product(id):
+    # Delete returns 1 if the product existed and was
+    # deleted, or 0 if they didn't exist.  For our
+    # purposes, both outcomes can be considered a success.
+    Product.delete(id)
+    return "Product Deleted"
+
+# Fetch all products
+
+
+@app.route("/product/fetchall/", methods=["GET"])
+def fetch_all_products():
+    products = Product.find().sort_by("-timestamp").all()
+
+    return build_results(products)
 
 @app.route("/", methods=["GET"])
 def home_page():

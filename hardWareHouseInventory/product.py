@@ -1,6 +1,6 @@
 from redis_om import Field, JsonModel
 from pydantic import PositiveInt
-
+from datetime import datetime
 # Added Product Schema
 
 
@@ -11,3 +11,4 @@ class Product(JsonModel):
     price: PositiveInt = Field(index=True)
     units: PositiveInt = Field(index=True)
     lower_limit_stock: PositiveInt = Field(index=True)
+    timestamp: datetime = Field(index=True, default=datetime.now())

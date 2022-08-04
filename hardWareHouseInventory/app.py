@@ -101,10 +101,11 @@ def home_page():
                 <title>hardWareHouse - Inventory</title>
             </head>
             <body>
-                <h1>hardWareHouse Inventory REST API</h1>
+                <h1><i>hardWareHouse Inventory REST API</i></h1>
                 <h2>API Usage</h2>
+
                 <h3>1. Create a Product</h3>
-                <code>POST - http://127.0.0.1:5000/product/new</code><br>
+                <code>POST - http://127.0.0.1:5000/product/new/</code><br>
                 <code>header - Content-type - application/json</code><br>
                 <code>body - {
                     "product_name": "{name-of-product}",
@@ -114,6 +115,30 @@ def home_page():
                     "lower_limit_stock": {lower-stock-limit}
                                     }
                 </code>
+
+                <h3>2. Update a Product</h3>
+                <code>PUT - http://127.0.0.1:5000/product/update/{id}/</code><br>
+                <code>header - Content-type - application/json</code><br>
+                <code>body - {
+                    "product_name": "{updated-name-of-product}",
+                    "product_desc": "{updated-product-description}",
+                    "price": {updated-price-per-piece},
+                    "units": {updated-no-of-units-available},
+                    "lower_limit_stock": {updated-lower-stock-limit}
+                                    }
+                </code>
+
+                <h3>3. Fetch All Products</h3>
+                <code>GET - http://127.0.0.1:5000/product/fetchall/</code><br>
+                <code>header - Content-type - application/json</code><br>
+
+                <h3>4. Search a Product</h3>
+                <code>GET - http://127.0.0.1:5000/product/search/{product_name}/</code><br>
+                <code>header - Content-type - application/json</code><br>
+                
+                <h3>5. Delete a Product</h3>
+                <code>DELETE - http://127.0.0.1:5000/product/delete/{id}/</code><br>
+                <code>header - Content-type - application/json</code><br>
             </body>
         </html>
     """

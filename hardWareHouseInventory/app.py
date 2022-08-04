@@ -81,6 +81,17 @@ def fetch_all_products():
 
     return build_results(products)
 
+# Product Search by name. not exact search
+
+
+@app.route("/product/search/<product_name>", methods=["GET"])
+def search_product(product_name):
+    product = Product.find(Product.product_name %
+                           product_name).sort_by("-timestamp").all()
+
+    return build_results(product)
+
+
 @app.route("/", methods=["GET"])
 def home_page():
     return """

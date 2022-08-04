@@ -6,8 +6,8 @@ from datetime import datetime
 
 class Product(JsonModel):
 
-    product_name: str = Field(index=True)
-    product_desc: str = Field(index=True, full_text_search=True)
+    product_name: str = Field(index=True, full_text_search=True)
+    product_desc: str = Field(index=True)
     price: PositiveInt = Field(index=True)
     units: PositiveInt = Field(index=True)
     lower_limit_stock: PositiveInt = Field(index=True)

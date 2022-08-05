@@ -1,6 +1,6 @@
 import React from "react";
 
-const NavBar = () => {
+const NavBar = ({ onSearch, searchTerm }) => {
   return (
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
@@ -22,22 +22,25 @@ const NavBar = () => {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="/">
-                <i className="fa-solid fa-circle-plus fa-flip mx-1 fa-xl"></i>{" "}
+                <i className="fa-solid fa-circle-plus mx-1 fa-xl text-info"></i>{" "}
                 New Product
               </a>
             </li>
           </ul>
-          <form className="d-flex" role="search">
+          <div className="d-flex">
             <input
               className="form-control me-2"
-              type="search"
+              id="search"
+              type="text"
+              onChange={onSearch}
+              value={searchTerm}
               placeholder="Search Product"
               aria-label="Search"
             />
-            <button className="btn btn-outline-info" type="submit">
+            <label className="btn btn-outline-info" htmlFor="search">
               <i className="fa-solid fa-magnifying-glass fa-shake"></i>
-            </button>
-          </form>
+            </label>
+          </div>
         </div>
       </div>
     </nav>

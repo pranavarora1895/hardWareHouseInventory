@@ -3,49 +3,45 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <div>
-        <footer className="text-center text-lg-start bg-light">
-          <div className="container d-flex justify-content-center py-5">
-            <button
-              type="button"
-              className="btn btn-info btn-lg btn-floating mx-2"
-            >
-              <i className="fab fa-linkedin text-white"></i>
-            </button>
-            <button
-              type="button"
-              className="btn btn-info btn-lg btn-floating mx-2"
-            >
-              <i className="fab fa-dev text-white"></i>
-            </button>
-            <button
-              type="button"
-              className="btn btn-info btn-lg btn-floating mx-2"
-            >
-              <i className="fab fa-github text-white"></i>
-            </button>
-            <button
-              type="button"
-              className="btn btn-info btn-lg btn-floating mx-2"
-            >
-              <i className="fa-solid fa-envelope text-white"></i>
-            </button>
+      <div className="container">
+        <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div className="col-md-4 d-flex align-items-center">
+            <span className="mb-3 mb-md-0 text-muted">
+              © 2022 Pranav Arora. &nbsp;
+            </span>
+            <span className="mb-3 mb-md-0">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/pranavarora1895/hardWareHouseInventory/blob/main/LICENSE"
+              >
+                View License here.
+              </a>
+            </span>
           </div>
 
-          <div
-            className="text-center text-white p-3"
-            style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
-          >
-            © 2022 Copyright: &nbsp;
-            <a
-              className="text-white"
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/pranavarora1895/hardWareHouseInventory/blob/main/LICENSE"
-            >
-              Pranav Arora. View License here.
-            </a>
-          </div>
+          <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li className="ms-3">
+              <a className="text-muted" href="/">
+                <i className="fa-brands fa-dev fa-lg"></i>
+              </a>
+            </li>
+            <li className="ms-3">
+              <a className="text-muted" href="/">
+                <i className="fa-brands fa-github fa-lg"></i>
+              </a>
+            </li>
+            <li className="ms-3">
+              <a className="text-muted" href="/">
+                <i className="fa-brands fa-linkedin fa-lg"></i>
+              </a>
+            </li>
+            <li className="ms-3">
+              <a className="text-muted" href="/">
+                <i className="fa-solid fa-envelope fa-lg"></i>
+              </a>
+            </li>
+          </ul>
         </footer>
       </div>
     </>

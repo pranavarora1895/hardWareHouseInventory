@@ -4,11 +4,12 @@ from flask import Flask, request
 from pydantic import ValidationError
 from product import Product
 from redis_om import Migrator
+from flask_cors import CORS  # comment this on deployment
 from redis_om.model import NotFoundError
 from datetime import datetime
 
 app = Flask(__name__)
-
+CORS(app)  # comment this on deployment
 # Utility function to format list of Product objects as
 # a results dictionary, for easy conversion to JSON in
 # API responses.

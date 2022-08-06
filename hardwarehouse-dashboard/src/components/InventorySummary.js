@@ -26,7 +26,7 @@ const InventorySummary = ({
         <div className="col">
           <div className="card shadow m-2" style={{ width: "18rem" }}>
             <div className="card-body">
-              <h5 className="card-title">Total Investment</h5>
+              <h5 className="card-title">Inventory Cost</h5>
               <img src={investmentImage} alt="" height={150} width={250} />
               <h6 className="card-subtitle mb-2 text-muted display-6">
                 ₹{totalInvestment}
@@ -37,7 +37,7 @@ const InventorySummary = ({
         <div className="col">
           <div className="card shadow m-2" style={{ width: "18rem" }}>
             <div className="card-body">
-              <h5 className="card-title">Stock Availability</h5>
+              <h5 className="card-title">Stock Control</h5>
               <img src={stockAvailable} alt="" height={150} width={250} />
               <h6 className="card-subtitle mb-2 text-muted display-6">
                 {stockReadiness.toFixed(2)}%

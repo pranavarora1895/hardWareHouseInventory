@@ -22,22 +22,42 @@ const Footer = () => {
 
           <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
             <li className="ms-3">
-              <a className="text-muted" href="/">
+              <a
+                className="text-muted"
+                href="https://dev.to/pranavarora1895"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="fa-brands fa-dev fa-lg"></i>
               </a>
             </li>
             <li className="ms-3">
-              <a className="text-muted" href="/">
+              <a
+                className="text-muted"
+                href="https://github.com/pranavarora1895/hardWareHouseInventory"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="fa-brands fa-github fa-lg"></i>
               </a>
             </li>
             <li className="ms-3">
-              <a className="text-muted" href="/">
+              <a
+                className="text-muted"
+                href="https://www.linkedin.com/in/pranav-arora-354b71bb/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="fa-brands fa-linkedin fa-lg"></i>
               </a>
             </li>
             <li className="ms-3">
-              <a className="text-muted" href="/">
+              <a
+                className="text-muted"
+                href="mailto:aurorapranav187@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="fa-solid fa-envelope fa-lg"></i>
               </a>
             </li>

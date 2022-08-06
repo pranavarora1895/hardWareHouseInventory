@@ -34,7 +34,7 @@ function App() {
       },
     });
     const json = await response.json();
-    console.log(json);
+
     setMainTable(json.results);
   };
 
@@ -68,7 +68,7 @@ function App() {
       }),
     });
     const json = await response.json();
-    console.log(json);
+
     setMainTable(
       mainTable.concat({
         pk: json,
@@ -86,6 +86,7 @@ function App() {
   const deleteProduct = async (pk) => {
     // API Call
     const url = `${host}/product/delete/${pk}/`;
+    // eslint-disable-next-line
     const response = await fetch(url, {
       method: "DELETE",
       headers: {
@@ -124,8 +125,8 @@ function App() {
         lower_limit_stock: parseInt(lower_limit_stock),
       }),
     });
+    // eslint-disable-next-line
     const json = await response.json();
-    console.log(json);
 
     let newTable = JSON.parse(JSON.stringify(mainTable));
 
@@ -145,7 +146,7 @@ function App() {
         break;
       }
     }
-    console.log("newTable:", newTable);
+
     setMainTable(newTable);
   };
 
@@ -186,7 +187,7 @@ function App() {
 
       <AllTables
         searchedTable={searchedTable}
-        setMainTable={setMainTable}
+        mainTable={mainTable}
         updateProduct={updateProduct}
         deleteProduct={deleteProduct}
         getLowStockItems={getLowStockItems(mainTable)}

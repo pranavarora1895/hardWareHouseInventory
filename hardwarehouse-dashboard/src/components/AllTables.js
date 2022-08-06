@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 import ProductTable from "./ProductTable";
 const AllTables = ({
   searchedTable,
-  setMainTable,
+  mainTable,
   updateProduct,
   deleteProduct,
   getLowStockItems,
@@ -94,8 +94,6 @@ const AllTables = ({
                     name="eproduct_name"
                     value={product.eproduct_name}
                     onChange={onChange}
-                    minLength={3}
-                    required
                   />
                 </div>
                 <div className="mb-3">
@@ -109,8 +107,6 @@ const AllTables = ({
                     name="eproduct_desc"
                     value={product.eproduct_desc}
                     onChange={onChange}
-                    minLength={3}
-                    required
                   />
                 </div>
                 <div className="mb-3">
@@ -124,7 +120,6 @@ const AllTables = ({
                     name="eprice"
                     value={product.eprice}
                     onChange={onChange}
-                    required
                   />
                 </div>
                 <div className="mb-3">
@@ -138,7 +133,6 @@ const AllTables = ({
                     name="eunits"
                     value={product.eunits}
                     onChange={onChange}
-                    required
                   />
                 </div>
                 <div className="mb-3">
@@ -152,7 +146,6 @@ const AllTables = ({
                     name="elower_limit_stock"
                     value={product.elower_limit_stock}
                     onChange={onChange}
-                    required
                   />
                 </div>
               </form>
@@ -168,8 +161,11 @@ const AllTables = ({
               </button>
               <button
                 disabled={
-                  product.eproduct_name.length < 3 ||
-                  product.eproduct_desc.length < 3
+                  product.eproduct_name.length < 1 ||
+                  product.eproduct_desc.length < 1 ||
+                  product.eprice.length < 1 ||
+                  product.eunits.length < 1 ||
+                  product.elower_limit_stock.length < 1
                 }
                 type="submit"
                 className="btn btn-primary"
@@ -183,12 +179,11 @@ const AllTables = ({
         </div>
       </div>
 
-      {searchedTable.length > 0 ? (
+      {mainTable.length > 0 && searchedTable.length > 0 ? (
         <>
           <h2 className="display-5 text-center my-4">Products Table</h2>
           <ProductTable
             tableData={searchedTable}
-            setTableData={setMainTable}
             editProduct={editProduct}
             deleteProduct={deleteProduct}
             tableId={1}

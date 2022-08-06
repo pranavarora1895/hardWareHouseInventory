@@ -4,7 +4,6 @@ const NavBar = ({ onSearch, searchTerm, addProduct }) => {
   const ref = useRef(null);
   const refClose = useRef(null);
   const [product, setProduct] = useState({
-    pk: "",
     eproduct_name: "",
     eproduct_desc: "",
     eprice: "",
@@ -27,7 +26,6 @@ const NavBar = ({ onSearch, searchTerm, addProduct }) => {
     );
     refClose.current.click();
     setProduct({
-      pk: "",
       eproduct_name: "",
       eproduct_desc: "",
       eprice: "",
@@ -85,8 +83,6 @@ const NavBar = ({ onSearch, searchTerm, addProduct }) => {
                     name="eproduct_name"
                     value={product.eproduct_name}
                     onChange={onChange}
-                    minLength={3}
-                    required
                   />
                 </div>
                 <div className="mb-3">
@@ -100,8 +96,6 @@ const NavBar = ({ onSearch, searchTerm, addProduct }) => {
                     name="eproduct_desc"
                     value={product.eproduct_desc}
                     onChange={onChange}
-                    minLength={3}
-                    required
                   />
                 </div>
                 <div className="mb-3">
@@ -115,7 +109,6 @@ const NavBar = ({ onSearch, searchTerm, addProduct }) => {
                     name="eprice"
                     value={product.eprice}
                     onChange={onChange}
-                    required
                   />
                 </div>
                 <div className="mb-3">
@@ -129,7 +122,6 @@ const NavBar = ({ onSearch, searchTerm, addProduct }) => {
                     name="eunits"
                     value={product.eunits}
                     onChange={onChange}
-                    required
                   />
                 </div>
                 <div className="mb-3">
@@ -143,7 +135,6 @@ const NavBar = ({ onSearch, searchTerm, addProduct }) => {
                     name="elower_limit_stock"
                     value={product.elower_limit_stock}
                     onChange={onChange}
-                    required
                   />
                 </div>
               </form>
@@ -159,8 +150,11 @@ const NavBar = ({ onSearch, searchTerm, addProduct }) => {
               </button>
               <button
                 disabled={
-                  product.eproduct_name.length < 3 ||
-                  product.eproduct_desc.length < 3
+                  product.eproduct_name.length < 1 ||
+                  product.eproduct_desc.length < 1 ||
+                  product.eprice.length < 1 ||
+                  product.eunits.length < 1 ||
+                  product.elower_limit_stock.length < 1
                 }
                 type="submit"
                 className="btn btn-primary"
@@ -194,7 +188,6 @@ const NavBar = ({ onSearch, searchTerm, addProduct }) => {
               <li className="nav-item">
                 <button
                   className="btn btn-info text-white"
-                  role="button"
                   onClick={() => {
                     newProduct();
                   }}

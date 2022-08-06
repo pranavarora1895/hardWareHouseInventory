@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProductTable = ({ tableData, setTableData }) => {
+const ProductTable = ({ tableData, editProduct }) => {
   return (
     <div className="table-responsive">
       <table className="table table-sm table-hover container shadow-sm">
@@ -29,7 +29,13 @@ const ProductTable = ({ tableData, setTableData }) => {
                 <td>₹{product.price}</td>
                 <td>₹{product.units * product.price}</td>
                 <td className="text-center">
-                  <i className="fa-solid fa-file-pen text-primary"></i>
+                  <i
+                    className="fa-solid fa-file-pen text-primary"
+                    role="button"
+                    onClick={() => {
+                      editProduct(product);
+                    }}
+                  ></i>
                 </td>
                 <td className="text-center">
                   <i className="fa-solid fa-trash-can text-danger"></i>

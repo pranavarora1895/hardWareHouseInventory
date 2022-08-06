@@ -21,9 +21,13 @@ const NavBar = ({ onSearch, searchTerm }) => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">
+              <a
+                className="nav-link active shadow-sm rounded"
+                aria-current="page"
+                href="/"
+              >
                 <i className="fa-solid fa-circle-plus mx-1 fa-xl text-info"></i>{" "}
-                New Product
+                Add Product
               </a>
             </li>
           </ul>
@@ -37,7 +41,7 @@ const NavBar = ({ onSearch, searchTerm }) => {
               placeholder="Search Product"
               aria-label="Search"
             />
-            <label className="btn btn-outline-info" htmlFor="search">
+            <label className="btn btn-outline-info shadow-sm" htmlFor="search">
               <i className="fa-solid fa-magnifying-glass fa-shake"></i>
             </label>
           </div>

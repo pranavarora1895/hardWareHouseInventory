@@ -169,7 +169,7 @@ const NavBar = ({ onSearch, searchTerm, addProduct }) => {
       </div>
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
+          <a className="navbar-brand fw-bold" href="/">
             hardWareHouse Inventory
           </a>
           <button

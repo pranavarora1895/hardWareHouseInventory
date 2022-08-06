@@ -1,5 +1,7 @@
 import React from "react";
-
+import productsImage from "../img/products.png";
+import investmentImage from "../img/investments.png";
+import stockAvailable from "../img/stockAvailable.png";
 const InventorySummary = ({
   totalProducts,
   totalUnits,
@@ -13,8 +15,11 @@ const InventorySummary = ({
           <div className="card shadow m-2" style={{ width: "18rem" }}>
             <div className="card-body">
               <h5 className="card-title">Total Products</h5>
-              <h6 className="card-subtitle mb-2 text-muted">{totalProducts}</h6>
-              <p className="card-text">Total Units: {totalUnits}</p>
+              <h6 className="card-subtitle mb-2 text-muted display-3">
+                {totalProducts}
+              </h6>
+              <img src={productsImage} alt="" height={100} width={200} />
+              <p className="card-text lead">Total Qty: {totalUnits}</p>
             </div>
           </div>
         </div>
@@ -22,27 +27,21 @@ const InventorySummary = ({
           <div className="card shadow m-2" style={{ width: "18rem" }}>
             <div className="card-body">
               <h5 className="card-title">Total Investment</h5>
-              <h6 className="card-subtitle mb-2 text-muted">
+              <img src={investmentImage} alt="" height={150} width={250} />
+              <h6 className="card-subtitle mb-2 text-muted display-6">
                 ₹{totalInvestment}
               </h6>
-              <p className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
             </div>
           </div>
         </div>
         <div className="col">
           <div className="card shadow m-2" style={{ width: "18rem" }}>
             <div className="card-body">
-              <h5 className="card-title">Stock Readiness</h5>
-              <h6 className="card-subtitle mb-2 text-muted">
+              <h5 className="card-title">Stock Availability</h5>
+              <img src={stockAvailable} alt="" height={150} width={250} />
+              <h6 className="card-subtitle mb-2 text-muted display-6">
                 {stockReadiness.toFixed(2)}%
               </h6>
-              <p className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
             </div>
           </div>
         </div>

@@ -191,6 +191,7 @@ const AllTables = ({
             setTableData={setMainTable}
             editProduct={editProduct}
             deleteProduct={deleteProduct}
+            tableId={1}
           />
         </>
       ) : (
@@ -208,6 +209,7 @@ const AllTables = ({
             tableData={getLowStockItems}
             editProduct={editProduct}
             deleteProduct={deleteProduct}
+            tableId={2}
           />
         </>
       ) : (

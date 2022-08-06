@@ -26,6 +26,14 @@ const NavBar = ({ onSearch, searchTerm, addProduct }) => {
       product.elower_limit_stock
     );
     refClose.current.click();
+    setProduct({
+      pk: "",
+      eproduct_name: "",
+      eproduct_desc: "",
+      eprice: "",
+      eunits: "",
+      elower_limit_stock: "",
+    });
   };
 
   const onChange = (e) => {
@@ -184,14 +192,16 @@ const NavBar = ({ onSearch, searchTerm, addProduct }) => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <i
-                  className="fa-solid fa-circle-plus mx-1 fa-xl text-info"
+                <button
+                  className="btn btn-info text-white"
                   role="button"
                   onClick={() => {
                     newProduct();
                   }}
-                ></i>{" "}
-                Add Product
+                >
+                  <i className="fa-solid fa-circle-plus mx-1 fa-xl"></i>
+                  Add Product
+                </button>{" "}
               </li>
             </ul>
             <div className="d-flex">

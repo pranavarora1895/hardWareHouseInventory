@@ -32,7 +32,7 @@ def create_person():
         print(request.json)
         new_product = Product(**request.json)
         new_product.save()
-        return new_product.pk
+        return json.dumps(new_product.pk)
 
     except ValidationError as e:
         print(e)

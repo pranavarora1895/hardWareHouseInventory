@@ -71,8 +71,9 @@ function App() {
     console.log(json);
     setMainTable(
       mainTable.concat({
-        product_name,
-        product_desc,
+        pk: json,
+        product_name: product_name,
+        product_desc: product_desc,
         price: parseInt(price),
         units: parseInt(units),
         lower_limit_stock: parseInt(lower_limit_stock),
@@ -91,8 +92,6 @@ function App() {
         "Content-Type": "application/json",
       },
     });
-    const json = await response.json();
-    console.log(json);
 
     const newTable = mainTable.filter((product) => {
       return product.pk !== pk;

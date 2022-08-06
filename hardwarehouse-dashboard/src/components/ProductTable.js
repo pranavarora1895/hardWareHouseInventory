@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProductTable = ({ tableData, editProduct, deleteProduct }) => {
+const ProductTable = ({ tableData, editProduct, deleteProduct, tableId }) => {
   return (
     <div className="table-responsive">
       <table className="table table-sm table-hover container shadow-sm">
@@ -9,7 +9,12 @@ const ProductTable = ({ tableData, editProduct, deleteProduct }) => {
             <th scope="col">#</th>
             <th scope="col">ID</th>
             <th scope="col">Product</th>
-            <th scope="col">Description</th>
+            {tableId === 1 ? (
+              <th scope="col">Description</th>
+            ) : (
+              <th scope="col">Low Units Limit</th>
+            )}
+
             <th scope="col">Units</th>
             <th scope="col">Unit Price</th>
             <th scope="col">Total Price</th>
@@ -24,7 +29,12 @@ const ProductTable = ({ tableData, editProduct, deleteProduct }) => {
                 <th scope="row">{index + 1}</th>
                 <td>{product.pk}</td>
                 <td>{product.product_name}</td>
-                <td>{product.product_desc}</td>
+                {tableId === 1 ? (
+                  <td>{product.product_desc}</td>
+                ) : (
+                  <td>{product.lower_limit_stock}</td>
+                )}
+
                 <td>{product.units}</td>
                 <td>₹{product.price}</td>
                 <td>₹{product.units * product.price}</td>

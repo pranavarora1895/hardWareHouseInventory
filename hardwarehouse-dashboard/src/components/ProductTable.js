@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProductTable = ({ tableData, editProduct }) => {
+const ProductTable = ({ tableData, editProduct, deleteProduct }) => {
   return (
     <div className="table-responsive">
       <table className="table table-sm table-hover container shadow-sm">
@@ -38,7 +38,13 @@ const ProductTable = ({ tableData, editProduct }) => {
                   ></i>
                 </td>
                 <td className="text-center">
-                  <i className="fa-solid fa-trash-can text-danger"></i>
+                  <i
+                    className="fa-solid fa-trash-can text-danger"
+                    role="button"
+                    onClick={() => {
+                      deleteProduct(product.pk);
+                    }}
+                  ></i>
                 </td>
               </tr>
             );

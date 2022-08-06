@@ -5,6 +5,7 @@ const AllTables = ({
   searchedTable,
   setMainTable,
   updateProduct,
+  deleteProduct,
   getLowStockItems,
 }) => {
   const ref = useRef(null);
@@ -55,14 +56,14 @@ const AllTables = ({
         ref={ref}
         className="btn btn-primary d-none"
         data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
+        data-bs-target="#updateModal"
       >
         Launch demo modal
       </button>
       {/* Modal */}
       <div
         className="modal fade"
-        id="exampleModal"
+        id="updateModal"
         tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
@@ -189,6 +190,7 @@ const AllTables = ({
             tableData={searchedTable}
             setTableData={setMainTable}
             editProduct={editProduct}
+            deleteProduct={deleteProduct}
           />
         </>
       ) : (
@@ -205,6 +207,7 @@ const AllTables = ({
           <ProductTable
             tableData={getLowStockItems}
             editProduct={editProduct}
+            deleteProduct={deleteProduct}
           />
         </>
       ) : (

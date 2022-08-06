@@ -1,15 +1,15 @@
 import "./App.css";
 import NavBar from "./components/NavBar";
-import ProductTable from "./components/ProductTable";
 import InventorySummary from "./components/InventorySummary";
 import Footer from "./components/Footer";
 import React, { useState, useEffect } from "react";
 import AllTables from "./components/AllTables";
 
+const initTable = [];
 function App() {
   // eslint-disable-next-line
   const host = "http://127.0.0.1:5000";
-  const [mainTable, setMainTable] = useState([]);
+  const [mainTable, setMainTable] = useState(initTable);
   const [searchTerm, setSearchTerm] = useState("");
 
   // Search Product
@@ -52,7 +52,7 @@ function App() {
     lower_limit_stock
   ) => {
     // POST API Call
-    const url = `${host}/product/new/`;
+    const url = `${host}/product/new`;
     const response = await fetch(url, {
       method: "POST",
       headers: {
@@ -62,14 +62,22 @@ function App() {
       body: JSON.stringify({
         product_name,
         product_desc,
-        price,
-        units,
-        lower_limit_stock,
+        price: parseInt(price),
+        units: parseInt(units),
+        lower_limit_stock: parseInt(lower_limit_stock),
       }),
     });
     const json = await response.json();
     console.log(json);
-    setMainTable(mainTable.concat(json));
+    setMainTable(
+      mainTable.concat({
+        product_name,
+        product_desc,
+        price: parseInt(price),
+        units: parseInt(units),
+        lower_limit_stock: parseInt(lower_limit_stock),
+      })
+    );
   };
 
   // Delete a Product
@@ -171,12 +179,17 @@ function App() {
 
   return (
     <>
-      <NavBar searchTerm={searchTerm} onSearch={handleSearch} />
+      <NavBar
+        searchTerm={searchTerm}
+        onSearch={handleSearch}
+        addProduct={addProduct}
+      />
 
       <AllTables
         searchedTable={searchedTable}
         setMainTable={setMainTable}
         updateProduct={updateProduct}
+        deleteProduct={deleteProduct}
         getLowStockItems={getLowStockItems(mainTable)}
       />
 

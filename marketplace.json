@@ -1,0 +1,21 @@
+{
+    "app_name": "hardWareHouse Inventory Management Application",
+    "description": "Showcases how to manage and analyse an inventory of a shop using Redis Database for its CRUD operations",
+    "hidden": false,
+    "rank": 39, 
+    "type": "Full App",
+    "contributed_by": "Redis Labs",
+    "repo_url": "https://github.com/pranavarora1895/hardWareHouseInventory",
+    "download_url": "https://github.com/pranavarora1895/hardWareHouseInventory/archive/refs/heads/main.zip",
+    "hosted_url": "",
+    "language": ["Python"], 
+    "redis_commands": ["JSON.SET","JSON.GET","DEL", "FT.SEARCH"], 
+    "redis_features": ["database"],
+    "redis_modules": ["RediSearch","RedisJSON"],
+    "app_image_urls": [
+    ], 
+    "youtube_url": "", 
+    "special_tags": ["redishackathon", "devto"], 
+    "verticals": ["Retail"],
+    "markdown": "https://github.com/pranavarora1895/hardWareHouseInventory/blob/main/README.md"
+}

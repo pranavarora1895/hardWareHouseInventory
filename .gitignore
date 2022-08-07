@@ -107,8 +107,6 @@ celerybeat.pid
 # SageMath parsed files
 *.sage.py
 
-redis-om-python-flask-skeleton-app
-
 # Environments
 .venv
 env/

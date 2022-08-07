@@ -31,9 +31,9 @@ Here's a short video that explains the project and how it uses Redis:
 
 ## How it works
 
-### How the data is stored:
-
 - The backend is written in `Flask` and the frontend is written in `React`.
+
+### How the data is stored:
 
 - From `redis_om` module, following were used to create the `Product` schema:
   - `JsonModel`

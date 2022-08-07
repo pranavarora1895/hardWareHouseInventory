@@ -1,6 +1,6 @@
 {
     "app_name": "hardWareHouse Inventory Management Application",
-    "description": "Showcases how to manage and analyse an inventory of a shop using Redis Database for its CRUD operations",
+    "description": "Showcases how to manage and analyze an inventory of a shop using Redis Database for its CRUD operations",
     "hidden": false,
     "rank": 39, 
     "type": "Full App",

@@ -132,14 +132,57 @@ def fetch_all_products():
 
 ## How to run it locally?
 
-[Make sure you test this with a fresh clone of your repo, these instructions will be used to judge your app.]
-
 ### Prerequisites
 
-[Fill out with any prerequisites (e.g. Node, Docker, etc.). Specify minimum versions]
+- Python - v3.8.5
+- Docker - v20.10.17
+- Nodejs - v8.11.0
 
 ### Local installation
 
-[Insert instructions for local installation]
+1. Clone the repository from github
+```shell
+
+git clone https://github.com/pranavarora1895/hardWareHouseInventory.git
+```
+2. **Server Side:** Go to `hardWareHouseInventory\hardWareHouseInventory\` folder and then:
+```shell
+# Go to server side
+cd .\hardWareHouseInventory\hardWareHouseInventory\
+
+# Get redis image
+docker compose up -d
+
+# Create virtual env
+python -m venv venv
+
+# Activate env for powershell
+.\venv\Scripts\Activate.ps1
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run server
+flask run
+```
+3. To load some sample data, run `productsloader.py` script in the `hardWareHouseInventory\hardWareHouseInventory\` folder:
+```shell
+# Open a new PowerShell window
+cd .\hardWareHouseInventory\hardWareHouseInventory\
+.\venv\Scripts\Activate.ps1
+python .\productsloader.py
+# After loading the products, you can close that powershell window
+```
+4. **Client Side**: Go to `hardWareHouseInventory\hardwarehouse-dashboard\` folder and then:
+```shell
+# Open another powershell window
+cd .\hardWareHouseInventory\hardwarehouse-dashboard\
+
+# Install dependencies
+npm install
+
+# Start the client server
+npm run start
+```
 
 

@@ -212,5 +212,17 @@ npm install
 npm run start
 ```
 
-Time taken to create this app: [![wakatime](https://wakatime.com/badge/user/e72a1859-4793-4da2-b36b-49c7378256a0/project/e60d1b21-00c0-4f29-bfba-5f5175700f5a.svg)](https://wakatime.com/badge/user/e72a1859-4793-4da2-b36b-49c7378256a0/project/e60d1b21-00c0-4f29-bfba-5f5175700f5a)
+---
+
+### Let's get connected:
+
+[![devto](https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white)](https://dev.to/dashboard)
+[![facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/cosmicpranav007/)
+[![linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pranav-arora-354b71bb/)
+[![instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/arorapranav187/)
+
+#### :hourglass_flowing_sand: *Time taken to create this app:* [![wakatime](https://wakatime.com/badge/user/e72a1859-4793-4da2-b36b-49c7378256a0/project/e60d1b21-00c0-4f29-bfba-5f5175700f5a.svg)](https://wakatime.com/badge/user/e72a1859-4793-4da2-b36b-49c7378256a0/project/e60d1b21-00c0-4f29-bfba-5f5175700f5a)
+
+
+
 

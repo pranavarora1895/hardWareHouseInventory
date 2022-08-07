@@ -27,7 +27,7 @@ def build_results(products):
 
 
 @app.route("/product/new", methods=["POST"])
-def create_person():
+def create_product():
     try:
         print(request.json)
         new_product = Product(**request.json)

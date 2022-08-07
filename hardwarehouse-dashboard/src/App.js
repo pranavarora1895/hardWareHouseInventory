@@ -26,16 +26,20 @@ function App() {
   // Fetch All Products
 
   const getAllProducts = async () => {
-    const url = `${host}/product/fetchall/`;
-    const response = await fetch(url, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    const json = await response.json();
+    try {
+      const url = `${host}/product/fetchall/`;
+      const response = await fetch(url, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const json = await response.json();
 
-    setMainTable(json.results);
+      setMainTable(json.results);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   useEffect(() => {
@@ -52,33 +56,37 @@ function App() {
     lower_limit_stock
   ) => {
     // POST API Call
-    const url = `${host}/product/new`;
-    const response = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+    try {
+      const url = `${host}/product/new`;
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
 
-      body: JSON.stringify({
-        product_name,
-        product_desc,
-        price: parseInt(price),
-        units: parseInt(units),
-        lower_limit_stock: parseInt(lower_limit_stock),
-      }),
-    });
-    const json = await response.json();
+        body: JSON.stringify({
+          product_name,
+          product_desc,
+          price: parseInt(price),
+          units: parseInt(units),
+          lower_limit_stock: parseInt(lower_limit_stock),
+        }),
+      });
+      const json = await response.json();
 
-    setMainTable(
-      mainTable.concat({
-        pk: json,
-        product_name: product_name,
-        product_desc: product_desc,
-        price: parseInt(price),
-        units: parseInt(units),
-        lower_limit_stock: parseInt(lower_limit_stock),
-      })
-    );
+      setMainTable(
+        mainTable.concat({
+          pk: json,
+          product_name: product_name,
+          product_desc: product_desc,
+          price: parseInt(price),
+          units: parseInt(units),
+          lower_limit_stock: parseInt(lower_limit_stock),
+        })
+      );
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   // Delete a Product

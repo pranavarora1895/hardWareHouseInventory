@@ -110,7 +110,6 @@ celerybeat.pid
 redis-om-python-flask-skeleton-app
 
 # Environments
-.env
 .venv
 env/
 venv/

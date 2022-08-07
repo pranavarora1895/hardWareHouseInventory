@@ -35,7 +35,7 @@ Here's a short video that explains the project and how it uses Redis:
 
 ### How the data is stored:
 
-- From `redis_om` module, following were used to create the `Product` schema:
+- From `redis_om` module, following are used to create the `Product` schema:
   - `JsonModel`
   - `Field`
 

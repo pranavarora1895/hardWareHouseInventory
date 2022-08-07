@@ -212,4 +212,5 @@ npm install
 npm run start
 ```
 
+Time taken to create this app: [![wakatime](https://wakatime.com/badge/user/e72a1859-4793-4da2-b36b-49c7378256a0/project/e60d1b21-00c0-4f29-bfba-5f5175700f5a.svg)](https://wakatime.com/badge/user/e72a1859-4793-4da2-b36b-49c7378256a0/project/e60d1b21-00c0-4f29-bfba-5f5175700f5a)
 

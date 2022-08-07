@@ -19,7 +19,7 @@ const InventorySummary = ({
                 {totalProducts}
               </h6>
               <img src={productsImage} alt="" height={100} width={200} />
-              <p className="card-text lead">Total Qty: {totalUnits}</p>
+              <p className="card-text lead">Total Qty: {totalUnits} units</p>
             </div>
           </div>
         </div>

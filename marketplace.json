@@ -12,7 +12,7 @@
     "redis_commands": ["JSON.SET","JSON.GET","DEL", "FT.SEARCH"], 
     "redis_features": ["database"],
     "redis_modules": ["RediSearch","RedisJSON"],
-    "app_image_urls": [
+    "app_image_urls": ["https://user-images.githubusercontent.com/48170643/183287691-e1d6f7c1-59b4-4dfc-a289-a8804d98410f.png", "https://user-images.githubusercontent.com/48170643/183287720-2631aeeb-e3f8-40a5-aeea-bb0b41feba84.JPG", "https://user-images.githubusercontent.com/48170643/183287718-b986896f-8bd0-4c2b-a24a-92250b6561b4.JPG", "https://user-images.githubusercontent.com/48170643/183287721-af856e0a-9e44-4cbf-81ba-9448d1048621.JPG", "https://user-images.githubusercontent.com/48170643/183287779-cf23fc53-c7ed-46d2-a47c-360715bddbdb.JPG"
     ], 
     "youtube_url": "", 
     "special_tags": ["redishackathon", "devto"], 

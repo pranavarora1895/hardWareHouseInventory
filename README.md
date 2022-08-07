@@ -29,9 +29,13 @@ Here's a short video that explains the project and how it uses Redis:
 
 [![Embed your YouTube video](https://i.ytimg.com/vi/vyxdC1qK4NE/maxresdefault.jpg)](https://www.youtube.com/watch?v=vyxdC1qK4NE)
 
-## How it works
+## Technical Stack
 
-- The backend is written in `Flask` and the frontend is written in `React`.
+- Database: *Redis*
+- Backend: *Flask*
+- Frontend: *React*
+
+## How it works
 
 ### How the data is stored:
 

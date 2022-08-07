@@ -169,8 +169,11 @@ flask run
 ```shell
 # Open a new PowerShell window
 cd .\hardWareHouseInventory\hardWareHouseInventory\
+
 .\venv\Scripts\Activate.ps1
+
 python .\productsloader.py
+
 # After loading the products, you can close that powershell window
 ```
 4. **Client Side**: Go to `hardWareHouseInventory\hardwarehouse-dashboard\` folder and then:

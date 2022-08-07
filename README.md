@@ -46,6 +46,26 @@ Here's a short video that explains the project and how it uses Redis:
   - units: PositiveInt
   - lower_limit_stock: PositiveInt
   - timestamp: datetime
+  
+```python
+from redis_om import Field, JsonModel
+from pydantic import PositiveInt
+from datetime import datetime
+# Added Product Schema
+
+
+class Product(JsonModel):
+
+    product_name: str = Field(index=True, full_text_search=True)
+    product_desc: str = Field(index=True)
+    price: PositiveInt = Field(index=True)
+    units: PositiveInt = Field(index=True)
+    lower_limit_stock: PositiveInt = Field(index=True)
+    timestamp: datetime = Field(index=True, default=datetime.now())
+```
+| ![newProduct](https://user-images.githubusercontent.com/48170643/183287718-b986896f-8bd0-4c2b-a24a-92250b6561b4.JPG) |
+|:--:|
+| *Way to Add a new Product* |
 
 - When user clicks on the `Add Product` button on the dashboard, the `addProduct` method triggers the following `POST` request from the frontend.
 ```js

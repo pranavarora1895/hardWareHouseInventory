@@ -90,7 +90,7 @@ def create_product():
 
 - The product update also follows the similar pattern.
 
-- Sample data stored:
+- Sample data stored: `Key Name: :product.Product:01G9W6KP7S4K3DS3BRD5AEREDX`
 ```js
 {
 pk: "01G9VZ5C9PPXF3WYYB7JYN8WAR",

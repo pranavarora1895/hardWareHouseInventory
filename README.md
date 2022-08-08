@@ -25,9 +25,7 @@ An inventory management application for a shop to keep the track of its products
 
 Here's a short video that explains the project and how it uses Redis:
 
-[Insert your own video here, and remove the one below]
-
-[![Embed your YouTube video](https://i.ytimg.com/vi/vyxdC1qK4NE/maxresdefault.jpg)](https://www.youtube.com/watch?v=vyxdC1qK4NE)
+[![hardwarehouseYoutubeThumbnail](https://user-images.githubusercontent.com/48170643/183334490-ba865a00-b4b2-4d90-bf52-09560e929d73.png)](https://www.youtube.com/watch?v=vyxdC1qK4NE)
 
 ## Technical Stack
 

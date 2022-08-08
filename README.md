@@ -221,7 +221,7 @@ npm run start
 [![linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pranav-arora-354b71bb/)
 [![instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/arorapranav187/)
 
-#### :hourglass_flowing_sand: *Time taken to create this app:* [![wakatime](https://wakatime.com/badge/user/e72a1859-4793-4da2-b36b-49c7378256a0/project/e60d1b21-00c0-4f29-bfba-5f5175700f5a.svg)](https://wakatime.com/badge/user/e72a1859-4793-4da2-b36b-49c7378256a0/project/e60d1b21-00c0-4f29-bfba-5f5175700f5a)
+#### :hourglass_flowing_sand: *Time taken to create this app:* [![wakatime](https://wakatime.com/badge/user/e72a1859-4793-4da2-b36b-49c7378256a0/project/e60d1b21-00c0-4f29-bfba-5f5175700f5a.svg)](https://wakatime.com/@pranavarora1895/projects/jzwipwmfui?start=2022-08-02)
 
 
 

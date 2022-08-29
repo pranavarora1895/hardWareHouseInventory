@@ -167,7 +167,7 @@ def fetch_all_products():
 
 git clone https://github.com/pranavarora1895/hardWareHouseInventory.git
 ```
-2. **Server Side:** Go to `hardWareHouseInventory\hardWareHouseInventory\` folder and then:
+2. **Server Side:** _Make sure your **docker** is up and running._ Go to `hardWareHouseInventory\hardWareHouseInventory\` folder and then:
 ```shell
 # Go to server side
 cd .\hardWareHouseInventory\hardWareHouseInventory\
